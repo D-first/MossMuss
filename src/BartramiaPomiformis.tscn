@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/bartramiaPomiformis_1.png" type="Texture" id=1]
-[ext_resource path="res://src/BartramiaPomiformis.cs" type="Script" id=2]
+[ext_resource path="res://src/Moss.cs" type="Script" id=2]
 [ext_resource path="res://assets/bartramiaPomiformis_2.png" type="Texture" id=4]
 
 [sub_resource type="SpriteFrames" id=1]
