@@ -1,0 +1,123 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/back.jpg" type="Texture" id=1]
+[ext_resource path="res://src/GrowPoint.tscn" type="PackedScene" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://src/Stage.cs" type="Script" id=4]
+
+[sub_resource type="BitmapFont" id=1]
+
+[node name="Stage" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpawnPoints" type="Node2D" parent="."]
+
+[node name="GrowPoint" parent="SpawnPoints" instance=ExtResource( 2 )]
+position = Vector2( 504, 684 )
+
+[node name="GrowPoint3" parent="SpawnPoints" instance=ExtResource( 2 )]
+position = Vector2( 552, 744 )
+
+[node name="GrowPoint4" parent="SpawnPoints" instance=ExtResource( 2 )]
+position = Vector2( 636, 768 )
+
+[node name="GrowPoint5" parent="SpawnPoints" instance=ExtResource( 2 )]
+position = Vector2( 624, 732 )
+
+[node name="GrowPoint6" parent="SpawnPoints" instance=ExtResource( 2 )]
+position = Vector2( 600, 792 )
+
+[node name="GrowPoint7" parent="SpawnPoints" instance=ExtResource( 2 )]
+position = Vector2( 732, 816 )
+
+[node name="GrowPoint8" parent="SpawnPoints" instance=ExtResource( 2 )]
+position = Vector2( 708, 744 )
+
+[node name="GrowPoint9" parent="SpawnPoints" instance=ExtResource( 2 )]
+position = Vector2( 660, 816 )
+
+[node name="GrowPoint10" parent="SpawnPoints" instance=ExtResource( 2 )]
+position = Vector2( 696, 780 )
+
+[node name="GrowPoint11" parent="SpawnPoints" instance=ExtResource( 2 )]
+position = Vector2( 624, 696 )
+
+[node name="GrowPoint12" parent="SpawnPoints" instance=ExtResource( 2 )]
+position = Vector2( 504, 732 )
+
+[node name="GrowPoint2" parent="SpawnPoints" instance=ExtResource( 2 )]
+position = Vector2( 552, 684 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 108.0
+margin_top = 1363.49
+margin_right = 172.0
+margin_bottom = 1427.49
+rect_scale = Vector2( 3, 2.92 )
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+margin_left = 412.078
+margin_top = 1368.83
+margin_right = 476.078
+margin_bottom = 1432.83
+rect_scale = Vector2( 3, 2.92 )
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton3" type="TextureButton" parent="."]
+margin_left = 761.806
+margin_top = 1363.49
+margin_right = 825.806
+margin_bottom = 1427.49
+rect_scale = Vector2( 3, 2.92 )
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton4" type="TextureButton" parent="."]
+margin_left = 145.11
+margin_top = 1657.16
+margin_right = 209.11
+margin_bottom = 1721.16
+rect_scale = Vector2( 3, 2.92 )
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton5" type="TextureButton" parent="."]
+margin_left = 457.462
+margin_top = 1667.83
+margin_right = 521.462
+margin_bottom = 1731.83
+rect_scale = Vector2( 3, 2.92 )
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 1 )
+text = "aaaaaaaaaaaaaaaaaaaaaa"

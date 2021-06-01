@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/dicranales_2.png" type="Texture" id=1]
+[ext_resource path="res://assets/dicranales_1.png" type="Texture" id=2]
+[ext_resource path="res://src/Dicranales.cs" type="Script" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.0
+} ]
+
+[node name="Dicranales" type="Node2D"]
+script = ExtResource( 3 )
+maxHumidity = 7
+minHumidity = -3
+maxLight = 3
+minLight = -6
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -16 )
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 1 )

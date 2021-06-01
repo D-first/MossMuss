@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/next_day.wav-456ec2ddb4cf1b00a018a554bae2fbe4.sample"
+
+[deps]
+
+source_file="res://assets/next_day.wav"
+dest_files=[ "res://.import/next_day.wav-456ec2ddb4cf1b00a018a554bae2fbe4.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

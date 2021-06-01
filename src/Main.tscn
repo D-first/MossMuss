@@ -1,0 +1,2847 @@
+[gd_scene load_steps=35 format=2]
+
+[ext_resource path="res://src/Main.cs" type="Script" id=1]
+[ext_resource path="res://assets/back_soil_1.png" type="Texture" id=2]
+[ext_resource path="res://src/GrowPoint.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/air_up.png" type="Texture" id=4]
+[ext_resource path="res://assets/base_2.png" type="Texture" id=5]
+[ext_resource path="res://assets/base_1.png" type="Texture" id=6]
+[ext_resource path="res://assets/stairs_1.png" type="Texture" id=7]
+[ext_resource path="res://assets/open_pressed.png" type="Texture" id=8]
+[ext_resource path="res://assets/air_down.png" type="Texture" id=9]
+[ext_resource path="res://assets/next_pressed.png" type="Texture" id=10]
+[ext_resource path="res://assets/humidity_up.png" type="Texture" id=11]
+[ext_resource path="res://assets/LightNovelPOP_FONT/LightNovelPOP.otf" type="DynamicFontData" id=12]
+[ext_resource path="res://assets/turn.png" type="Texture" id=13]
+[ext_resource path="res://assets/stay.png" type="Texture" id=14]
+[ext_resource path="res://assets/mainBGM.ogg" type="AudioStream" id=15]
+[ext_resource path="res://assets/spray.wav" type="AudioStream" id=16]
+[ext_resource path="res://assets/front_soil_1.png" type="Texture" id=17]
+[ext_resource path="res://assets/close_cork.wav" type="AudioStream" id=18]
+[ext_resource path="res://assets/open_cork.wav" type="AudioStream" id=19]
+[ext_resource path="res://assets/cork.png" type="Texture" id=20]
+[ext_resource path="res://assets/next_day.wav" type="AudioStream" id=21]
+[ext_resource path="res://src/Slider.tscn" type="PackedScene" id=22]
+[ext_resource path="res://assets/light.png" type="Texture" id=23]
+[ext_resource path="res://assets/humidity_up_pressed.png" type="Texture" id=24]
+[ext_resource path="res://assets/close_pressed.png" type="Texture" id=25]
+[ext_resource path="res://assets/return.png" type="Texture" id=26]
+[ext_resource path="res://assets/return_pressed.png" type="Texture" id=27]
+[ext_resource path="res://assets/howto.jpg" type="Texture" id=28]
+[ext_resource path="res://assets/help_pressed.png" type="Texture" id=29]
+[ext_resource path="res://assets/help.png" type="Texture" id=30]
+
+[sub_resource type="DynamicFont" id=1]
+size = 39
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 53
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 60
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 31
+font_data = ExtResource( 12 )
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 1 )
+air = -3
+humidity = 9
+
+[node name="Base" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Cork" type="TextureRect" parent="."]
+margin_right = 1080.0
+margin_bottom = 1920.0
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Base2" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="FrontSoil" type="Sprite" parent="."]
+position = Vector2( 540, 960 )
+z_index = 1
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Stairs" type="Sprite" parent="."]
+position = Vector2( 540, 960 )
+z_index = 1
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BackSoil" type="Sprite" parent="."]
+position = Vector2( 540, 960 )
+texture = ExtResource( 2 )
+
+[node name="GrowPoints" type="Node2D" parent="."]
+
+[node name="GrowPoint" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 424, 696 )
+
+[node name="GrowPoint2" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 440, 688 )
+
+[node name="GrowPoint3" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 464, 680 )
+
+[node name="GrowPoint4" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 456, 680 )
+
+[node name="GrowPoint5" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 472, 672 )
+
+[node name="GrowPoint6" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 488, 664 )
+
+[node name="GrowPoint7" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 504, 656 )
+
+[node name="GrowPoint8" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 520, 656 )
+
+[node name="GrowPoint9" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 536, 664 )
+
+[node name="GrowPoint10" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 552, 664 )
+
+[node name="GrowPoint11" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 568, 672 )
+
+[node name="GrowPoint12" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 584, 680 )
+
+[node name="GrowPoint13" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 592, 680 )
+
+[node name="GrowPoint14" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 600, 688 )
+
+[node name="GrowPoint15" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 616, 688 )
+
+[node name="GrowPoint16" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 632, 688 )
+
+[node name="GrowPoint17" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 648, 696 )
+
+[node name="GrowPoint18" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 664, 696 )
+
+[node name="GrowPoint19" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 680, 712 )
+
+[node name="GrowPoint20" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 704, 712 )
+
+[node name="GrowPoint21" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 674, 786 )
+z_index = 2
+
+[node name="GrowPoint224" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 634, 786 )
+z_index = 2
+
+[node name="GrowPoint225" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 602, 802 )
+z_index = 2
+
+[node name="GrowPoint226" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 184, 624 )
+z_index = 2
+
+[node name="GrowPoint227" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 160, 640 )
+z_index = 2
+
+[node name="GrowPoint228" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 328, 680 )
+z_index = 2
+
+[node name="GrowPoint229" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 288, 712 )
+z_index = 2
+
+[node name="GrowPoint230" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 208, 720 )
+z_index = 2
+
+[node name="GrowPoint231" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 152, 624 )
+z_index = 2
+
+[node name="GrowPoint232" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 136, 632 )
+z_index = 2
+
+[node name="GrowPoint233" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 128, 728 )
+z_index = 2
+
+[node name="GrowPoint234" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 168, 616 )
+z_index = 2
+
+[node name="GrowPoint235" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 624, 776 )
+z_index = 1
+
+[node name="GrowPoint236" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 608, 736 )
+z_index = 2
+
+[node name="GrowPoint237" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 640, 752 )
+z_index = 2
+
+[node name="GrowPoint238" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 656, 736 )
+z_index = 2
+
+[node name="GrowPoint239" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 600, 768 )
+z_index = 2
+
+[node name="GrowPoint240" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 552, 776 )
+z_index = 2
+
+[node name="GrowPoint241" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 432, 968 )
+z_index = 1
+
+[node name="GrowPoint242" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 480, 712 )
+z_index = 1
+
+[node name="GrowPoint243" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 568, 872 )
+z_index = 2
+
+[node name="GrowPoint244" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 664, 776 )
+z_index = 2
+
+[node name="GrowPoint245" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 736, 784 )
+z_index = 2
+
+[node name="GrowPoint246" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 656, 792 )
+z_index = 2
+
+[node name="GrowPoint247" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 696, 784 )
+z_index = 2
+
+[node name="GrowPoint248" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 672, 744 )
+z_index = 2
+
+[node name="GrowPoint249" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 632, 976 )
+z_index = 2
+
+[node name="GrowPoint250" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 688, 752 )
+z_index = 2
+
+[node name="GrowPoint251" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 736, 768 )
+z_index = 2
+
+[node name="GrowPoint252" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 616, 792 )
+z_index = 2
+
+[node name="GrowPoint253" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 728, 736 )
+z_index = 2
+
+[node name="GrowPoint254" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 768, 832 )
+z_index = 2
+
+[node name="GrowPoint255" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 712, 800 )
+z_index = 2
+
+[node name="GrowPoint256" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 792, 768 )
+z_index = 2
+
+[node name="GrowPoint257" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 768, 792 )
+z_index = 2
+
+[node name="GrowPoint258" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 728, 824 )
+z_index = 2
+
+[node name="GrowPoint22" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 744, 720 )
+
+[node name="GrowPoint23" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 752, 728 )
+
+[node name="GrowPoint24" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 768, 736 )
+
+[node name="GrowPoint25" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 784, 744 )
+
+[node name="GrowPoint26" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 800, 752 )
+
+[node name="GrowPoint27" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 816, 760 )
+
+[node name="GrowPoint28" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 832, 768 )
+
+[node name="GrowPoint29" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 840, 776 )
+
+[node name="GrowPoint30" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 856, 784 )
+
+[node name="GrowPoint31" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 872, 792 )
+
+[node name="GrowPoint32" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 888, 808 )
+
+[node name="GrowPoint33" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 896, 824 )
+
+[node name="GrowPoint34" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 912, 840 )
+
+[node name="GrowPoint35" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 928, 848 )
+
+[node name="GrowPoint36" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 944, 872 )
+
+[node name="GrowPoint37" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 952, 888 )
+
+[node name="GrowPoint38" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 968, 912 )
+
+[node name="GrowPoint39" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 976, 928 )
+
+[node name="GrowPoint40" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 984, 952 )
+
+[node name="GrowPoint41" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 984, 976 )
+
+[node name="GrowPoint42" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 992, 984 )
+
+[node name="GrowPoint43" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 984, 1008 )
+
+[node name="GrowPoint44" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 992, 1024 )
+
+[node name="GrowPoint45" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 984, 1032 )
+
+[node name="GrowPoint46" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 984, 1056 )
+
+[node name="GrowPoint47" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 130, 786 )
+z_index = 2
+
+[node name="GrowPoint48" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 130, 802 )
+z_index = 2
+
+[node name="GrowPoint49" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 968, 984 )
+
+[node name="GrowPoint50" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 944, 984 )
+
+[node name="GrowPoint51" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 968, 1008 )
+
+[node name="GrowPoint52" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 944, 1016 )
+
+[node name="GrowPoint53" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 952, 1040 )
+
+[node name="GrowPoint54" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 952, 1040 )
+
+[node name="GrowPoint55" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 968, 1040 )
+
+[node name="GrowPoint56" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 122, 794 )
+z_index = 2
+
+[node name="GrowPoint57" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 944, 1072 )
+
+[node name="GrowPoint58" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 944, 1048 )
+
+[node name="GrowPoint59" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 106, 826 )
+z_index = 2
+
+[node name="GrowPoint60" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 928, 1112 )
+
+[node name="GrowPoint61" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 928, 1104 )
+
+[node name="GrowPoint62" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 130, 818 )
+z_index = 2
+
+[node name="GrowPoint63" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 106, 850 )
+z_index = 2
+
+[node name="GrowPoint64" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 576, 1176 )
+z_index = 2
+
+[node name="GrowPoint65" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 912, 1136 )
+
+[node name="GrowPoint66" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 826, 794 )
+
+[node name="GrowPoint67" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 810, 786 )
+
+[node name="GrowPoint68" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 802, 826 )
+
+[node name="GrowPoint69" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 728, 1184 )
+z_index = 2
+
+[node name="GrowPoint70" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 850, 922 )
+z_index = 2
+
+[node name="GrowPoint71" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 842, 930 )
+z_index = 2
+
+[node name="GrowPoint72" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 826, 922 )
+z_index = 2
+
+[node name="GrowPoint73" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 584, 784 )
+z_index = 2
+
+[node name="GrowPoint74" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 896, 1144 )
+z_index = 2
+
+[node name="GrowPoint75" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 920, 1112 )
+z_index = 2
+
+[node name="GrowPoint76" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 314, 1074 )
+z_index = 2
+
+[node name="GrowPoint77" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 298, 1082 )
+z_index = 2
+
+[node name="GrowPoint78" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 698, 1178 )
+z_index = 2
+
+[node name="GrowPoint79" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 682, 1186 )
+z_index = 2
+
+[node name="GrowPoint80" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 666, 1194 )
+z_index = 2
+
+[node name="GrowPoint81" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 554, 1186 )
+z_index = 2
+
+[node name="GrowPoint82" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 530, 1194 )
+z_index = 2
+
+[node name="GrowPoint83" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 480, 1184 )
+z_index = 1
+
+[node name="GrowPoint84" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 514, 1186 )
+z_index = 2
+
+[node name="GrowPoint85" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 618, 1186 )
+z_index = 2
+
+[node name="GrowPoint86" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 642, 1186 )
+z_index = 2
+
+[node name="GrowPoint87" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 650, 1178 )
+z_index = 2
+
+[node name="GrowPoint88" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 936, 1080 )
+z_index = 2
+
+[node name="GrowPoint89" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 674, 1178 )
+z_index = 2
+
+[node name="GrowPoint90" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 674, 1146 )
+z_index = 2
+
+[node name="GrowPoint91" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 290, 1066 )
+z_index = 2
+
+[node name="GrowPoint92" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 274, 1074 )
+z_index = 2
+
+[node name="GrowPoint259" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 194, 906 )
+z_index = 2
+
+[node name="GrowPoint260" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 178, 914 )
+z_index = 2
+
+[node name="GrowPoint261" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 170, 898 )
+z_index = 2
+
+[node name="GrowPoint262" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 154, 906 )
+z_index = 2
+
+[node name="GrowPoint263" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 218, 898 )
+z_index = 2
+
+[node name="GrowPoint264" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 202, 906 )
+z_index = 2
+
+[node name="GrowPoint265" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 194, 890 )
+z_index = 2
+
+[node name="GrowPoint266" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 178, 898 )
+z_index = 2
+
+[node name="GrowPoint267" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 186, 794 )
+z_index = 2
+
+[node name="GrowPoint268" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 170, 802 )
+z_index = 2
+
+[node name="GrowPoint269" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 162, 786 )
+z_index = 2
+
+[node name="GrowPoint270" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 146, 794 )
+z_index = 2
+
+[node name="GrowPoint271" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 138, 810 )
+z_index = 2
+
+[node name="GrowPoint272" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 122, 818 )
+z_index = 2
+
+[node name="GrowPoint273" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 114, 802 )
+z_index = 2
+
+[node name="GrowPoint274" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 98, 810 )
+z_index = 2
+
+[node name="GrowPoint275" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 170, 706 )
+z_index = 2
+
+[node name="GrowPoint276" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 154, 714 )
+z_index = 2
+
+[node name="GrowPoint277" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 146, 698 )
+z_index = 2
+
+[node name="GrowPoint278" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 130, 706 )
+z_index = 2
+
+[node name="GrowPoint93" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 698, 1138 )
+z_index = 2
+
+[node name="GrowPoint94" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 834, 946 )
+z_index = 2
+
+[node name="GrowPoint95" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 722, 1146 )
+z_index = 2
+
+[node name="GrowPoint96" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 810, 930 )
+z_index = 2
+
+[node name="GrowPoint97" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 402, 1146 )
+z_index = 1
+
+[node name="GrowPoint98" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 410, 1162 )
+z_index = 1
+
+[node name="GrowPoint99" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 434, 1170 )
+z_index = 1
+
+[node name="GrowPoint100" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 456, 1176 )
+z_index = 1
+
+[node name="GrowPoint101" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 498, 1178 )
+z_index = 2
+
+[node name="GrowPoint102" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 426, 1146 )
+z_index = 1
+
+[node name="GrowPoint103" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 968, 960 )
+
+[node name="GrowPoint104" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 952, 960 )
+
+[node name="GrowPoint105" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 936, 952 )
+
+[node name="GrowPoint106" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 944, 928 )
+
+[node name="GrowPoint107" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 952, 936 )
+
+[node name="GrowPoint108" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 968, 944 )
+
+[node name="GrowPoint109" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 952, 906 )
+
+[node name="GrowPoint110" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 920, 912 )
+
+[node name="GrowPoint111" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 936, 904 )
+
+[node name="GrowPoint112" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 936, 888 )
+
+[node name="GrowPoint113" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 920, 880 )
+
+[node name="GrowPoint114" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 912, 864 )
+
+[node name="GrowPoint115" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 896, 856 )
+
+[node name="GrowPoint116" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 896, 872 )
+
+[node name="GrowPoint117" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 840, 872 )
+
+[node name="GrowPoint118" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 856, 888 )
+
+[node name="GrowPoint119" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 864, 864 )
+
+[node name="GrowPoint120" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 880, 880 )
+
+[node name="GrowPoint121" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 904, 888 )
+
+[node name="GrowPoint122" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 832, 880 )
+
+[node name="GrowPoint123" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 800, 880 )
+z_index = 2
+
+[node name="GrowPoint124" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 792, 864 )
+
+[node name="GrowPoint125" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 784, 856 )
+
+[node name="GrowPoint126" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 768, 872 )
+
+[node name="GrowPoint127" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 752, 856 )
+
+[node name="GrowPoint128" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 736, 880 )
+z_index = 2
+
+[node name="GrowPoint129" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 712, 856 )
+
+[node name="GrowPoint130" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 728, 848 )
+
+[node name="GrowPoint131" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 712, 880 )
+z_index = 2
+
+[node name="GrowPoint132" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 672, 864 )
+
+[node name="GrowPoint133" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 696, 832 )
+
+[node name="GrowPoint134" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 696, 864 )
+
+[node name="GrowPoint135" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 672, 832 )
+
+[node name="GrowPoint136" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 688, 848 )
+
+[node name="GrowPoint137" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 648, 856 )
+
+[node name="GrowPoint138" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 648, 840 )
+
+[node name="GrowPoint139" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 656, 824 )
+
+[node name="GrowPoint140" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 616, 832 )
+
+[node name="GrowPoint141" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 624, 856 )
+
+[node name="GrowPoint142" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 632, 808 )
+
+[node name="GrowPoint143" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 848, 824 )
+
+[node name="GrowPoint144" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 864, 832 )
+
+[node name="GrowPoint145" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 864, 800 )
+
+[node name="GrowPoint146" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 888, 808 )
+
+[node name="GrowPoint147" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 872, 832 )
+
+[node name="GrowPoint148" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 888, 856 )
+
+[node name="GrowPoint149" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 832, 856 )
+
+[node name="GrowPoint150" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 832, 832 )
+
+[node name="GrowPoint151" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 848, 848 )
+
+[node name="GrowPoint152" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 864, 856 )
+
+[node name="GrowPoint153" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 424, 712 )
+
+[node name="GrowPoint154" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 440, 720 )
+
+[node name="GrowPoint155" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 440, 704 )
+
+[node name="GrowPoint156" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 456, 704 )
+
+[node name="GrowPoint157" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 456, 720 )
+
+[node name="GrowPoint158" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 456, 752 )
+
+[node name="GrowPoint159" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 472, 744 )
+
+[node name="GrowPoint160" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 472, 736 )
+
+[node name="GrowPoint161" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 472, 736 )
+
+[node name="GrowPoint162" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 472, 728 )
+
+[node name="GrowPoint163" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 472, 696 )
+
+[node name="GrowPoint164" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 504, 688 )
+
+[node name="GrowPoint165" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 528, 672 )
+
+[node name="GrowPoint166" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 496, 672 )
+
+[node name="GrowPoint167" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 512, 680 )
+
+[node name="GrowPoint168" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 488, 704 )
+
+[node name="GrowPoint169" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 496, 728 )
+
+[node name="GrowPoint170" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 512, 712 )
+
+[node name="GrowPoint171" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 528, 696 )
+
+[node name="GrowPoint172" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 544, 688 )
+
+[node name="GrowPoint173" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 568, 704 )
+
+[node name="GrowPoint174" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 552, 688 )
+
+[node name="GrowPoint175" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 552, 680 )
+
+[node name="GrowPoint176" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 528, 688 )
+
+[node name="GrowPoint177" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 544, 704 )
+
+[node name="GrowPoint178" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 528, 712 )
+
+[node name="GrowPoint179" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 520, 728 )
+
+[node name="GrowPoint180" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 504, 736 )
+
+[node name="GrowPoint181" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 496, 752 )
+
+[node name="GrowPoint182" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 512, 760 )
+
+[node name="GrowPoint183" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 528, 744 )
+
+[node name="GrowPoint184" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 552, 728 )
+
+[node name="GrowPoint185" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 544, 712 )
+
+[node name="GrowPoint186" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 536, 728 )
+
+[node name="GrowPoint187" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 544, 744 )
+
+[node name="GrowPoint188" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 560, 712 )
+
+[node name="GrowPoint189" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 560, 696 )
+
+[node name="GrowPoint190" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 560, 688 )
+
+[node name="GrowPoint191" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 576, 688 )
+
+[node name="GrowPoint192" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 592, 696 )
+
+[node name="GrowPoint193" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 520, 768 )
+
+[node name="GrowPoint194" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 512, 776 )
+
+[node name="GrowPoint195" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 512, 784 )
+
+[node name="GrowPoint196" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 512, 792 )
+
+[node name="GrowPoint197" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 528, 784 )
+
+[node name="GrowPoint198" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 528, 800 )
+
+[node name="GrowPoint199" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 520, 792 )
+
+[node name="GrowPoint200" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 544, 808 )
+
+[node name="GrowPoint201" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 536, 792 )
+
+[node name="GrowPoint202" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 544, 800 )
+
+[node name="GrowPoint203" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 528, 768 )
+
+[node name="GrowPoint204" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 560, 832 )
+
+[node name="GrowPoint205" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 560, 816 )
+
+[node name="GrowPoint206" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 568, 824 )
+
+[node name="GrowPoint207" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 568, 840 )
+
+[node name="GrowPoint208" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 584, 840 )
+
+[node name="GrowPoint209" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 584, 824 )
+
+[node name="GrowPoint210" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 568, 808 )
+
+[node name="GrowPoint211" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 592, 816 )
+
+[node name="GrowPoint212" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 592, 840 )
+
+[node name="GrowPoint213" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 592, 832 )
+
+[node name="GrowPoint214" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 608, 824 )
+
+[node name="GrowPoint215" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 640, 824 )
+
+[node name="GrowPoint216" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 624, 840 )
+
+[node name="GrowPoint217" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 640, 840 )
+
+[node name="GrowPoint218" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 728, 872 )
+
+[node name="GrowPoint219" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 736, 864 )
+
+[node name="GrowPoint220" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 816, 872 )
+
+[node name="GrowPoint221" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 808, 848 )
+
+[node name="GrowPoint222" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 816, 840 )
+
+[node name="GrowPoint223" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 832, 848 )
+
+[node name="GrowPoint359" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 496, 904 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint360" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 552, 872 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint361" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 512, 888 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint362" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 536, 888 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint363" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 536, 872 )
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint364" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 544, 880 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint365" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 552, 864 )
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint366" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 560, 864 )
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint367" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 568, 848 )
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint368" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 584, 856 )
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint369" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 528, 888 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint370" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 416, 832 )
+z_index = 1
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint371" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 432, 824 )
+z_index = 1
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint372" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 448, 824 )
+z_index = 1
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint373" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 456, 808 )
+z_index = 1
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint374" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 464, 816 )
+z_index = 1
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint375" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 480, 800 )
+z_index = 1
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint376" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 472, 808 )
+z_index = 1
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint377" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 336, 736 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint378" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 352, 744 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint490" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 256, 688 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint491" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 264, 688 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint492" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 274, 680 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint493" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 290, 672 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint494" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 160, 704 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint495" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 136, 712 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint496" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 144, 696 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint497" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 152, 712 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint498" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 184, 704 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint499" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 184, 688 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint500" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 200, 704 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint501" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 320, 664 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint502" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 136, 794 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint503" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 152, 792 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint504" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 168, 792 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint505" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 200, 784 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint506" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 224, 776 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint507" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 251.8, 768 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint508" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 264, 776 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint509" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 272, 760 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint510" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 304, 776 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint511" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 328, 768 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint512" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 336, 752 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint513" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 368, 736 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint514" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 192, 888 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint515" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 208, 896 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint516" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 216, 888 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint517" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 232, 888 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint518" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 248, 880 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint519" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 265, 880 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint520" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 296, 864 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint521" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 274, 864 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint522" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 288, 872 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint523" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 488, 912 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint524" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 376, 856 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint525" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 352, 856 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint526" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 360, 1008 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint527" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 357, 1024 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint528" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 336, 1032 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint529" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 336, 1048 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint530" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 320, 1064 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint531" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 312, 1056 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint532" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 832, 960 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint533" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 824, 984 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint534" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 824, 1000 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint535" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 808, 1000 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint536" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 800, 1008 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint537" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 786, 1018 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint538" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 770, 1026 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint539" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 770, 1034 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint540" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 762, 1042 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint542" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 744, 1064 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint543" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 664, 1168 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint544" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 688, 1152 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint545" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 680, 1160 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint546" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 888, 912 )
+z_index = 1
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint547" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 568, 856 )
+z_index = 1
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint548" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 408, 984 )
+z_index = 1
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint549" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 672, 896 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint550" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 664, 912 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint551" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 664, 928 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint552" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 674, 912 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint553" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 752, 1056 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint554" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 688, 896 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint555" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 680, 912 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint556" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 648, 944 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint557" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 640, 960 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint558" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 656, 936 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint559" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 672, 920 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint560" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 688, 904 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint567" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 450, 1114 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint568" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 450, 1130 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint569" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 460, 1114 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint570" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 466, 1114 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint571" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 442, 1138 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint572" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 458, 1122 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint573" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 474, 1106 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint574" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 490, 1090 )
+z_index = 2
+reviseAppear = 1.0
+humidity = 1.0
+
+[node name="GrowPoint575" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 490, 1106 )
+z_index = 2
+reviseAppear = 1.0
+humidity = 1.0
+
+[node name="GrowPoint576" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 500, 1090 )
+z_index = 2
+reviseAppear = 1.0
+humidity = 1.0
+
+[node name="GrowPoint577" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 506, 1090 )
+z_index = 2
+reviseAppear = 1.0
+humidity = 1.0
+
+[node name="GrowPoint578" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 482, 1114 )
+z_index = 2
+reviseAppear = 1.0
+humidity = 1.0
+
+[node name="GrowPoint579" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 498, 1098 )
+z_index = 2
+reviseAppear = 1.0
+humidity = 1.0
+
+[node name="GrowPoint580" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 514, 1082 )
+z_index = 2
+reviseAppear = 1.0
+humidity = 1.0
+
+[node name="GrowPoint581" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 418, 1138 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint582" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 418, 1154 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint583" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 428, 1138 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint584" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 434, 1138 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint585" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 410, 1162 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint586" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 426, 1146 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint587" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 442, 1130 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint561" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 704, 896 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint562" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 824, 968 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint563" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 832, 976 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint564" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 592, 1176 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint379" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 360, 736 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint380" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 376, 728 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint381" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 400, 736 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint382" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 392, 728 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint383" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 408, 720 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint384" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 296, 680 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint385" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 296, 672 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint386" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 312, 672 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint387" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 312, 664 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint388" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 328, 656 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint389" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 328, 648 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint390" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 336, 656 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint391" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 336, 664 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint392" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 352, 672 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint393" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 360, 680 )
+z_index = 2
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint394" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 944, 1016 )
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint395" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 936, 1008 )
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint396" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 936, 1024 )
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint397" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 928, 1040 )
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint398" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 928, 1056 )
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint399" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 920, 1072 )
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint400" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 912, 1096 )
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint401" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 912, 1096 )
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint402" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 920, 1088 )
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint403" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 904, 1120 )
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint404" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 888, 1128 )
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint405" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 888, 1128 )
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint406" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 880, 1136 )
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint407" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 864, 1152 )
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint408" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 872, 1152 )
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint409" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 856, 1168 )
+reviseAppear = 1.5
+humidity = -0.5
+light = -3
+
+[node name="GrowPoint410" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 704, 1128 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint411" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 728, 1120 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint412" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 720, 1112 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint413" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 728, 1104 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint414" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 729, 1088 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint415" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 744, 1072 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint416" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 664, 808 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint417" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 736, 1080 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint418" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 728, 1096 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint419" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 570, 1034 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint420" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 578, 1010 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint421" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 586, 1018 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint422" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 586, 1002 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint423" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 610, 1010 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint424" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 610, 994 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint425" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 546, 1042 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint426" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 626, 986 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint427" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 376, 1008 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint428" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 384, 992 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint429" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 400, 1000 )
+z_index = 1
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint430" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 424, 984 )
+z_index = 1
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint431" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 424, 968 )
+z_index = 1
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint432" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 440, 952 )
+z_index = 1
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint433" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 464, 944 )
+z_index = 1
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint434" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 480, 928 )
+z_index = 1
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint435" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 448, 960 )
+z_index = 1
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint436" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 296, 864 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint437" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 312, 872 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint438" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 320, 856 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint439" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 336, 864 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint440" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 384, 840 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint441" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 368, 848 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint442" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 184, 784 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint443" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 216, 776 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint444" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 224, 792 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint445" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 248, 776 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint446" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 288, 776 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint447" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 280, 784 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint448" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 280, 784 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint449" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 312, 760 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint450" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 336, 768 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint451" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 168, 680 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint452" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 192, 688 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint453" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 169, 696 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint454" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 224, 688 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint455" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 208, 696 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint456" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 248, 688 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint457" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 240, 696 )
+z_index = 2
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint458" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 672, 760 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint459" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 624, 760 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint565" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 624, 760 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint566" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 624, 760 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint460" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 632, 736 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint461" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 664, 760 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint462" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 640, 776 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint463" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 720, 792 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint464" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 712, 760 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint465" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 680, 792 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint466" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 712, 784 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint467" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 712, 784 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint468" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 752, 776 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint469" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 744, 800 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint470" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 696, 824 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint471" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 784, 808 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint472" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 816, 800 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint473" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 784, 784 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint474" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 752, 816 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint475" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 568, 760 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint476" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 592, 720 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint477" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 600, 752 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint478" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 600, 784 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint479" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 672, 728 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint480" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 736, 752 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint481" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 768, 760 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint482" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 624, 712 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint483" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 656, 720 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint484" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 576, 744 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint485" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 680, 800 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint486" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 688, 768 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint487" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 712, 728 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint488" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 696, 744 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="GrowPoint489" parent="GrowPoints" instance=ExtResource( 3 )]
+position = Vector2( 696, 744 )
+reviseAppear = 0.5
+humidity = 1.5
+light = 3
+
+[node name="UI" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Open" type="TextureButton" parent="UI"]
+margin_left = 40.0
+margin_top = 1496.0
+margin_right = 1099.0
+margin_bottom = 2045.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Close" type="TextureButton" parent="UI"]
+margin_left = 288.0
+margin_top = 1496.0
+margin_right = 1342.0
+margin_bottom = 2037.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 25 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UpHumidity" type="TextureButton" parent="UI"]
+margin_left = 552.0
+margin_top = 1496.0
+margin_right = 1608.0
+margin_bottom = 2042.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Next" type="TextureButton" parent="UI"]
+margin_left = 816.0
+margin_top = 1496.0
+margin_right = 1872.0
+margin_bottom = 2042.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="UI"]
+margin_right = 729.0
+margin_bottom = 906.0
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="UI"]
+margin_left = 96.0
+margin_top = 144.0
+margin_right = 161.0
+margin_bottom = 180.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Day"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Turn" type="Label" parent="UI"]
+margin_left = 80.0
+margin_top = 208.0
+margin_right = 208.0
+margin_bottom = 281.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="UI"]
+margin_left = 200.0
+margin_top = 208.0
+margin_right = 265.0
+margin_bottom = 269.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "/"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MaxTurn" type="Label" parent="UI"]
+margin_left = 216.0
+margin_top = 208.0
+margin_right = 357.0
+margin_bottom = 281.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "100"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="UI"]
+visible = false
+margin_left = 680.0
+margin_top = 8.0
+margin_right = 1072.0
+margin_bottom = 352.0
+
+[node name="Label" type="Label" parent="UI/Panel"]
+margin_right = 88.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 4 )
+text = "通気性"
+
+[node name="DebugAirValue" type="Label" parent="UI/Panel"]
+margin_left = 104.0
+margin_right = 192.0
+margin_bottom = 73.0
+custom_fonts/font = SubResource( 4 )
+text = "0"
+
+[node name="Label3" type="Label" parent="UI/Panel"]
+margin_top = 80.0
+margin_right = 88.0
+margin_bottom = 153.0
+custom_fonts/font = SubResource( 4 )
+text = "湿度"
+
+[node name="DebugHumidityValue" type="Label" parent="UI/Panel"]
+margin_left = 104.0
+margin_top = 80.0
+margin_right = 192.0
+margin_bottom = 153.0
+custom_fonts/font = SubResource( 4 )
+text = "0"
+
+[node name="Label5" type="Label" parent="UI/Panel"]
+margin_top = 176.0
+margin_right = 88.0
+margin_bottom = 249.0
+custom_fonts/font = SubResource( 4 )
+text = "光量"
+
+[node name="DebugLightValue" type="Label" parent="UI/Panel"]
+margin_left = 104.0
+margin_top = 168.0
+margin_right = 192.0
+margin_bottom = 241.0
+custom_fonts/font = SubResource( 4 )
+text = "0"
+
+[node name="Label7" type="Label" parent="UI/Panel"]
+margin_top = 256.0
+margin_right = 88.0
+margin_bottom = 329.0
+custom_fonts/font = SubResource( 4 )
+text = "ターン"
+
+[node name="DebugTurnValue" type="Label" parent="UI/Panel"]
+margin_left = 104.0
+margin_top = 256.0
+margin_right = 192.0
+margin_bottom = 329.0
+custom_fonts/font = SubResource( 4 )
+text = "0"
+
+[node name="Slider" parent="UI" instance=ExtResource( 22 )]
+margin_left = 216.0
+margin_top = 1624.0
+margin_right = 216.0
+margin_bottom = 1624.0
+
+[node name="Light2D" type="Light2D" parent="UI"]
+position = Vector2( 568, 920 )
+texture = ExtResource( 23 )
+texture_scale = 2.0
+energy = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CanvasModulate" type="CanvasModulate" parent="UI"]
+z_index = 6
+color = Color( 0.52549, 0.52549, 0.52549, 1 )
+
+[node name="Help" type="TextureButton" parent="UI"]
+margin_left = 16.0
+margin_top = 1744.0
+margin_right = 562.0
+margin_bottom = 2259.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture_normal = ExtResource( 30 )
+texture_pressed = ExtResource( 29 )
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+volume_db = -10.0
+autoplay = true
+
+[node name="Spray" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+volume_db = -10.0
+
+[node name="OpenCork" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 19 )
+volume_db = -10.0
+
+[node name="CloseCork" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+volume_db = -10.0
+
+[node name="NextDay" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 21 )
+volume_db = -10.0
+
+[node name="Result" type="Control" parent="."]
+margin_left = 536.0
+margin_top = 288.0
+margin_right = 576.0
+margin_bottom = 328.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Return" type="TextureButton" parent="Result"]
+margin_left = 272.0
+margin_top = 1376.0
+margin_right = 824.0
+margin_bottom = 1898.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 26 )
+texture_pressed = ExtResource( 27 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HowTo" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="HowTo"]
+
+[node name="HowToWindow" type="TextureButton" parent="HowTo/CanvasLayer"]
+visible = false
+margin_right = 1080.0
+margin_bottom = 1920.0
+texture_normal = ExtResource( 28 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="UI/Open" to="." method="_on_Open_pressed"]
+[connection signal="pressed" from="UI/Close" to="." method="_on_Close_pressed"]
+[connection signal="pressed" from="UI/UpHumidity" to="." method="_on_UpHumidity_pressed"]
+[connection signal="pressed" from="UI/Next" to="." method="_on_Next_pressed"]
+[connection signal="Changed" from="UI/Slider" to="." method="_on_Slider_Changed"]
+[connection signal="pressed" from="UI/Help" to="." method="_on_Help_pressed"]
+[connection signal="finished" from="Spray" to="." method="_on_Spray_finished"]
+[connection signal="pressed" from="Result/Return" to="." method="_on_Return_pressed"]
+[connection signal="pressed" from="HowTo/CanvasLayer/HowToWindow" to="." method="_on_HowToWindow_pressed"]

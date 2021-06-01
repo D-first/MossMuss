@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Fissidens.cs" type="Script" id=1]
+[ext_resource path="res://assets/fissidens_2.png" type="Texture" id=2]
+[ext_resource path="res://assets/fissidens_1.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.0
+} ]
+
+[node name="Fissidens" type="Node2D"]
+script = ExtResource( 1 )
+maxHumidity = 10
+minHumidity = 6
+maxLight = -4
+minLight = -10
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 8, -80 )
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 1 )

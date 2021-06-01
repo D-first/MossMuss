@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/maingbm.ogg-51cb2ccf7e1ab1b01e3be4a07ac20852.oggstr"
+
+[deps]
+
+source_file="res://assets/maingbm.ogg"
+dest_files=[ "res://.import/maingbm.ogg-51cb2ccf7e1ab1b01e3be4a07ac20852.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
