@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class Moss : Node2D, IMoss
+public class Moss : Node2D
 {
     [Export(PropertyHint.Range, "-10,10,1")]
     private int maxHumidity;
